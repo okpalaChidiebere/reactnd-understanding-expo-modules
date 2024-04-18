@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "reactnd-understanding-expo-modules",
+    "slug": "reactnd-understanding-expo-modules",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
