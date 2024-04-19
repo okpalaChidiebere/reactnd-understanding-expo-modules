@@ -2,9 +2,9 @@
   "expo": {
     "name": "reactnd-understanding-expo-modules",
     "slug": "reactnd-understanding-expo-modules",
+    "scheme": "reactnd-expo-modules",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "plugins": ["expo-router"]
   }
 }
