@@ -3,7 +3,6 @@ import {
   Image,
   Platform,
   StyleSheet,
-  Text,
   View,
   useWindowDimensions,
 } from "react-native";
@@ -11,9 +10,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import * as Device from "expo-device";
 import * as ImagePicker from "expo-image-picker";
 import { DemoButton } from "../../src/components";
-import { Colors, Strings } from "../../src/values";
+import { Strings } from "../../src/values";
 import { router } from "expo-router";
-import { hello } from "../../modules/ml-kit";
 
 export default function Page() {
   const { width } = useWindowDimensions();

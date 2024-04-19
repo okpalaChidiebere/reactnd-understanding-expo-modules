@@ -2,9 +2,21 @@
   "expo": {
     "name": "reactnd-understanding-expo-modules",
     "slug": "reactnd-understanding-expo-modules",
-    "scheme": "reactnd-expo-modules",
+    "scheme": "reactndexpomodules",
     "version": "1.0.0",
     "assetBundlePatterns": ["**/*"],
-    "plugins": ["expo-router"]
+    "plugins": [
+      "expo-router",
+      [
+        "./plugins/withAndroidMainApplicationMetaData.js",
+        {
+          "android:name": "com.google.mlkit.vision.DEPENDENCIES",
+          "android:value": "ocr"
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.collinso.reactndunderstandingexpomodules"
+    }
   }
 }

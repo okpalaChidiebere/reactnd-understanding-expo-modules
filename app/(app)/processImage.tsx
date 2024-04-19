@@ -4,9 +4,11 @@ import {
   Image,
   ScrollView,
   StyleSheet,
+  Text,
   useWindowDimensions,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { recognizeImage } from "../../modules/text-recognition";
 
 export default function Page() {
   const { width: windowWidth } = useWindowDimensions();
@@ -19,16 +21,16 @@ export default function Page() {
       return;
     }
 
-    //      try {
-    //        const response = await recognizeImage(url);
-    //        //console.log(response)
-    //        if (response?.blocks?.length > 0) {
-    //          setResponse(response);
-    //          setAspectRation(response.height / response.width); //we set the correct width and height of the image processed originally
-    //        }
-    //      } catch (e) {
-    //        console.log(e);
-    //      }
+    try {
+      const response = await recognizeImage(url);
+      console.log(response);
+      //    if (response?.blocks?.length > 0) {
+      //      setResponse(response);
+      //      setAspectRation(response.height / response.width); //we set the correct width and height of the image processed originally
+      //    }
+    } catch (e) {
+      console.log(e);
+    }
   }, []);
 
   useFocusEffect(
@@ -47,6 +49,7 @@ export default function Page() {
           style={{ width: windowWidth, height: windowWidth * aspectRatio }}
           resizeMode="cover"
         />
+        {/* <Text>{hello()}</Text> */}
         {
           //`!!` means we converted the result returned into boolean :)
           //  !!response && (
