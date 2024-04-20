@@ -1,3 +1,13 @@
+export type Line = {
+  lineText: string;
+  lineFrame: {
+    width: number;
+    height: number;
+    top: number;
+    left: number;
+  } | null;
+};
+
 export type RecognizeImageResponse = {
   height: number;
   width: number;
@@ -7,16 +17,8 @@ export type RecognizeImageResponse = {
       width: number;
       height: number;
       top: number;
-      bottom: number;
+      left: number;
     } | null;
-    lines: Array<{
-      lineText: string;
-      lineFrame: {
-        width: number;
-        height: number;
-        top: number;
-        bottom: number;
-      } | null;
-    }>;
+    lines: Array<Line>;
   }>;
 };

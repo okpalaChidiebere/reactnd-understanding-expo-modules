@@ -4,11 +4,11 @@ import {
   Image,
   ScrollView,
   StyleSheet,
-  Text,
   useWindowDimensions,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { recognizeImage } from "../../modules/text-recognition";
+import { ResponseRenderer } from "../../src/components";
 
 export default function Page() {
   const { width: windowWidth } = useWindowDimensions();
@@ -51,15 +51,15 @@ export default function Page() {
         />
         {
           //   `!!` means we converted the result returned into boolean :)
-          //    !!response && (
-          //      <ResponseRenderer
-          //        response={response}
-          //        scale={
-          //          windowWidth /
-          //          response.width /** helps us set position of blocks while rendering */
-          //        }
-          //      />
-          //    )
+          !!response && (
+            <ResponseRenderer
+              response={response}
+              scale={
+                windowWidth /
+                response.width /** helps us set position of blocks while rendering */
+              }
+            />
+          )
         }
       </ScrollView>
     </SafeAreaView>
