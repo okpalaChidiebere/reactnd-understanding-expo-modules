@@ -23,11 +23,11 @@ export default function Page() {
 
     try {
       const response = await recognizeImage(url);
-      console.log(response);
-      //    if (response?.blocks?.length > 0) {
-      //      setResponse(response);
-      //      setAspectRation(response.height / response.width); //we set the correct width and height of the image processed originally
-      //    }
+      //   console.log(response);
+      if (response.blocks.length > 0) {
+        setResponse(response);
+        setAspectRation(response.height / response.width); //we set the correct width and height of the image processed originally
+      }
     } catch (e) {
       console.log(e);
     }
@@ -49,18 +49,17 @@ export default function Page() {
           style={{ width: windowWidth, height: windowWidth * aspectRatio }}
           resizeMode="cover"
         />
-        {/* <Text>{hello()}</Text> */}
         {
-          //`!!` means we converted the result returned into boolean :)
-          //  !!response && (
-          //    <ResponseRenderer
-          //      response={response}
-          //      scale={
-          //        windowWidth /
-          //        response.width /** helps us set position of blocks while rendeing */
-          //      }
-          //    />
-          //  )
+          //   `!!` means we converted the result returned into boolean :)
+          //    !!response && (
+          //      <ResponseRenderer
+          //        response={response}
+          //        scale={
+          //          windowWidth /
+          //          response.width /** helps us set position of blocks while rendering */
+          //        }
+          //      />
+          //    )
         }
       </ScrollView>
     </SafeAreaView>
