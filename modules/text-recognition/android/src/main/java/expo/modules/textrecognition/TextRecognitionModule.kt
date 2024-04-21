@@ -56,7 +56,7 @@ class TextRecognitionModule : Module() {
           promise.resolve(response)
         }
         .addOnFailureListener { e ->
-          throw TextRecognitionFailedException()
+          promise.reject("ERR_TEXT_TECOGNITION_EXCEPTION", "Text Recognition is failed.", e)
         }
       } catch (e: IOException) {
         e.printStackTrace()

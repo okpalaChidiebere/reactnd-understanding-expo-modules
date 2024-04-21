@@ -17,6 +17,9 @@
     ],
     "android": {
       "package": "com.collinso.reactndunderstandingexpomodules"
+    },
+    "ios": {
+      "bundleIdentifier": "com.collinso.reactndunderstandingexpomodules"
     }
   }
 }

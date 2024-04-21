@@ -1,11 +1,13 @@
+type Frame = {
+  width: number;
+  height: number;
+  top: number;
+  left: number;
+};
+
 export type Line = {
   lineText: string;
-  lineFrame: {
-    width: number;
-    height: number;
-    top: number;
-    left: number;
-  } | null;
+  lineFrame: Frame | null;
 };
 
 export type RecognizeImageResponse = {
@@ -13,12 +15,7 @@ export type RecognizeImageResponse = {
   width: number;
   blocks: Array<{
     blockText: string;
-    blockFrame: {
-      width: number;
-      height: number;
-      top: number;
-      left: number;
-    } | null;
+    blockFrame: Frame | null;
     lines: Array<Line>;
   }>;
 };
