@@ -23,6 +23,7 @@ Sometimes a React Native app needs to access a native platform API, or some feat
 
 # Expo Plugin USefule liks
 
+- [https://www.sitepen.com/blog/doing-more-with-expo-using-custom-native-code](https://www.sitepen.com/blog/doing-more-with-expo-using-custom-native-code)
 - [https://github.com/expo/expo/issues/19548](https://github.com/expo/expo/issues/19548)
 - [https://forums.expo.dev/t/how-to-edit-android-manifest-was-build/65663/4](https://forums.expo.dev/t/how-to-edit-android-manifest-was-build/65663/4)
 - [https://forums.expo.dev/t/app-json-meta-data-android-name-asset-statements/70994/3](https://forums.expo.dev/t/app-json-meta-data-android-name-asset-statements/70994/3)
